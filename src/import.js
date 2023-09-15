@@ -63,71 +63,393 @@ import WillBrothers from './assets/character-icons/WillBrothers.webp'
 import WuChang from './assets/character-icons/WuChang.webp'
 import Yidhra from './assets/character-icons/Yidhra.webp'
 
-const portraits =  [
-    Ada,
-    Aesop,
-    Alva ,
-    Andrew,
-    Ann,
-    Anne,
-    Antonio,
-    Bane,
-    Bonbon,
-    Burke,
-    Demi ,
-    Edgar,
-    Eli,
-    Emil ,
-    Emily,
-    Emma,
-    Fiona ,
-    Freddy ,
-    Frederick,
-    Galatea ,
-    Ganji,
-    Grace,
-    Hastur ,
-    Helena ,
-    Ithaqua ,
-    Jack ,
-    Joker ,
-    JokerHunter,
-    Jose,
-    Joseph ,
-    Keigan,
-    Kevin ,
-    Kreacher ,
-    Kurt ,
-    Leo,
-    Luca ,
-    Luchino,
-    LuchinoHunter ,
-    LuckyGuy ,
-    Margie ,
-    Martha,
-    Mary ,
-    Melly,
-    Memory ,
-    Michiko ,
-    Mike ,
-    Murro ,
-    Naib ,
-    Norton,
-    Orpheus,
-    OrpheusHunter,
-    Patricia,
-    Percy,
-    Philippe,
-    Robbie ,
-    Servais ,
-    Shiyi ,
-    Tracy ,
-    Vera ,
-    Victor ,
-    Violetta ,
-    WillBrothers,
-    WuChang ,
-    Yidhra
+var portraits =  [
+    {
+        img: Ada,
+        title: 'Ada',
+        classes: 'female survivor',
+        selected: false
+    },
+    {
+        img: Aesop,
+        title: 'Aesop',
+        classes: 'male survivor',
+        selected: false
+    },
+    {
+        img: Alva,
+        title: 'Alva',
+        classes: 'male hunter',
+        selected: false
+    } ,
+    {
+        img: Andrew,
+        title: 'Andrew',
+        classes: 'male survivor',
+        selected: false
+    },
+    {
+        img: Ann,
+        title: 'Ann',
+        classes: 'female hunter',
+        selected: false
+    },
+    {
+        img: Anne,
+        title: 'Anne',
+        classes: 'female survivor',
+        selected: false
+    },
+    {
+        img: Antonio,
+        title: 'Antonio',
+        classes: 'male hunter',
+        selected: false
+    },
+    {
+        img: Bane,
+        title: 'Bane',
+        classes: 'male hunter',
+        selected: false
+    },
+    {
+        img: Bonbon,
+        title: 'Bonbon',
+        classes: 'male hunter',
+        selected: false
+    },
+    {
+        img: Burke,
+        title: 'Burke',
+        classes: 'male hunter',
+        selected: false
+    },
+    {
+        img: Demi,
+        title: 'Demi',
+        classes: 'female survivor',
+        selected: false
+    } ,
+    {
+        img: Edgar,
+        title: 'Edgar',
+        classes: 'male survivor',
+        selected: false
+    },
+    {
+        img: Eli,
+        title: 'Eli',
+        classes: 'male survivor',
+        selected: false
+    },
+    {
+        img: Emil,
+        title: 'Emil',
+        classes: 'male survivor',
+        selected: false
+    } ,
+    {
+        img: Emily,
+        title: 'Emily',
+        classes: 'female survivor',
+        selected: false
+    },
+    {
+        img: Emma,
+        title: 'Emma',
+        classes: 'female survivor',
+        selected: false
+    },
+    {
+        img: Fiona,
+        title: 'Fiona',
+        classes: 'female survivor',
+        selected: false
+    } ,
+    {
+        img: Freddy,
+        title: 'Freddy',
+        classes: 'male survivor',
+        selected: false
+    } ,
+    {
+        img: Frederick,
+        title: 'Frederick',
+        classes: 'male survivor',
+        selected: false
+    },
+    {
+        img: Galatea,
+        title: 'Galatea',
+        classes: 'female hunter',
+        selected: false
+    } ,
+    {
+        img: Ganji,
+        title: 'Ganji',
+        classes: 'male survivor',
+        selected: false
+    },
+    {
+        img: Grace,
+        title: 'Grace',
+        classes: 'female hunter',
+        selected: false
+    },
+    {
+        img: Hastur,
+        title: 'Hastur',
+        classes: 'male hunter',
+        selected: false
+    } ,
+    {
+        img: Helena,
+        title: 'Helena',
+        classes: 'female survivor',
+        selected: false
+    },
+    {
+        img: Ithaqua,
+        title: 'Ithaqua',
+        classes: 'male hunter',
+        selected: false
+    } ,
+    {
+        img: Jack,
+        title: 'Jack',
+        classes: 'male hunter',
+        selected: false
+    } ,
+    {
+        img: Joker,
+        title: 'Joker',
+        classes: 'male survivor',
+        selected: false
+    } ,
+    {
+        img: JokerHunter,
+        title: 'JokerHunter',
+        classes: 'male hunter',
+        selected: false
+    },
+    {
+        img: Jose,
+        title: 'Jose',
+        classes: 'male survivor',
+        selected: false
+    },
+    {
+        img: Joseph,
+        title: 'Joseph',
+        classes: 'male hunter',
+        selected: false
+    } ,
+    {
+        img: Keigan,
+        title: 'Keigan',
+        classes: 'female hunter',
+        selected: false
+    },
+    {
+        img: Kevin,
+        title: 'Kevin',
+        classes: 'male survivor',
+        selected: false
+    } ,
+    {
+        img: Kreacher,
+        title: 'Kreacher',
+        classes: 'male survivor',
+        selected: false
+    } ,
+    {
+        img: Kurt,
+        title: 'Kurt',
+        classes: 'male survivor',
+        selected: false
+    } ,
+    {
+        img: Leo,
+        title: 'Leo',
+        classes: 'male hunter',
+        selected: false
+    },
+    {
+        img: Luca,
+        title: 'Luca',
+        classes: 'male survivor',
+        selected: false
+    } ,
+    {
+        img: Luchino,
+        title: 'Luchino',
+        classes: 'male survivor',
+        selected: false
+    },
+    {
+        img: LuchinoHunter,
+        title: 'Luchino (Hunter)',
+        classes: 'male hunter',
+        selected: false
+    } ,
+    {
+        img: LuckyGuy,
+        title: 'Lucky Guy',
+        classes: 'male survivor',
+        selected: false
+    } ,
+    {
+        img: Margie,
+        title: 'Margie',
+        classes: 'female survivor',
+        selected: false
+    } ,
+    {
+        img: Martha,
+        title: 'Martha',
+        classes: 'female survivor',
+        selected: false
+    },
+    {
+        img: Mary,
+        title: 'Mary',
+        classes: 'female hunter',
+        selected: false
+    } ,
+    {
+        img: Melly,
+        title: 'Melly',
+        classes: 'female survivor',
+        selected: false
+    },
+    {
+        img: Memory,
+        title: 'Little Girl / Memory',
+        classes: 'female survivor',
+        selected: false
+    } ,
+    {
+        img: Michiko,
+        title: 'Michiko',
+        classes: 'female hunter',
+        selected: false
+    } ,
+    {
+        img: Mike,
+        title: 'Mike',
+        classes: 'male survivor',
+        selected: false
+    } ,
+    {
+        img: Murro,
+        title: 'Murro',
+        classes: 'male survivor',
+        selected: false
+    } ,
+    {
+        img: Naib,
+        title: 'Naib',
+        classes: 'male survivor',
+        selected: false
+    } ,
+    {
+        img: Norton,
+        title: 'Norton',
+        classes: 'male survivor',
+        selected: false
+    },
+    {
+        img: Orpheus,
+        title: 'Orpheus',
+        classes: 'male survivor',
+        selected: false
+    },
+    {
+        img: OrpheusHunter,
+        title: 'Orpheus (Hunter)',
+        classes: 'male hunter',
+        selected: false
+    },
+    {
+        img: Patricia,
+        title: 'Patricia',
+        classes: 'female survivor',
+        selected: false
+    },
+    {
+        img: Percy,
+        title: 'Percy',
+        classes: 'male hunter',
+        selected: false
+    },
+    {
+        img: Philippe,
+        title: 'Philippe',
+        classes: 'male hunter',
+        selected: false
+    },
+    {
+        img: Robbie,
+        title: 'Robbie',
+        classes: 'male hunter',
+        selected: false
+    } ,
+    {
+        img: Servais,
+        title: 'Servais',
+        classes: 'male survivor',
+        selected: false
+    } ,
+    {
+        img: Shiyi,
+        title: 'Shiyi',
+        classes: 'female survivor',
+        selected: false
+    } ,
+    {
+        img: Tracy,
+        title: 'Tracy',
+        classes: 'female survivor',
+        selected: false
+    } ,
+    {
+        img: Vera,
+        title: 'Vera    ',
+        classes: 'female survivor',
+        selected: false
+    } ,
+    {
+        img: Victor,
+        title: 'Victor',
+        classes: 'male survivor',
+        selected: false
+    } ,
+    {
+        img: Violetta,
+        title: 'Violetta',
+        classes: 'female hunter',
+        selected: false
+    } ,
+    {
+        img: WillBrothers,
+        title: 'Will Brothers',
+        classes: 'male hunter',
+        selected: false
+    },
+    {
+        img: WuChang,
+        title: 'Wu Chang',
+        classes: 'male hunter',
+        selected: false
+    } ,
+    {
+        img: Yidhra,
+        title: 'Yidhra',
+        classes: 'female hunter',
+        selected: false
+    }
 ];
 
+
+//export default portraits;
 export default portraits;

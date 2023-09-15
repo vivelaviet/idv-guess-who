@@ -6,6 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
+  background-image: url('https://gamepedia.cursecdn.com/identityv_gamepedia_en/thumb/6/65/Lakeside_Village_Village.jpg/532px-Lakeside_Village_Village.jpg?version=b5b6fca3190bcc9be383d5154843fb41');
+  background-size: cover
 }
 
 code {
